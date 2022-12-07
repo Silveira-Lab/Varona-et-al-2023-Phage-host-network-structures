@@ -9,7 +9,7 @@ Prior to any read quality control and filtration the reads were visualised with 
 # Identify trimming and filtering parameters
 fastqc sample001_R1.fastq.gz sample001_R2.fastq.gz
 
-# QC reads with bbduk
+## QC reads with bbduk
 for f in *_R1.fastq.gz; do
       name=$(basename $f R1_001.fastq.gz)
    # Adaptor trimming 
@@ -37,3 +37,49 @@ for R1 in *_QC_R1.fastq.gz; do
 fastqc sample001_R1.fastq.gz sample001_R2.fastq.gz
 done
 ```
+
+## Contig assembly with SPAdes
+```bash
+spade.py 
+
+```
+
+## Mapping reads to contigs
+```bash
+
+bowtie2
+
+```
+
+## Binning contigs
+```bash
+
+maxbin2
+
+concoct
+
+```
+
+## Identification of viral contigs and bins
+```bash
+VIBRANT.py -i -o
+vrhyme
+
+```
+
+## Dereplicating and generating viral and bacterial clusters
+```bash
+VIBRANT.py -i -o
+vrhyme
+
+```
+
+
+
+
+## MAG and viral abundances
+```bash
+smalt
+```
+
+
