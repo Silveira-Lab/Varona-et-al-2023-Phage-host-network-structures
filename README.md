@@ -170,7 +170,7 @@ Fraction of reads mapped to viral and bacterial bin were caluclated by mapping q
 ```bash
 
 #make a smalt index 
-smalt index YOUR_INDEX {catenated}.fasta
+smalt index YOUR_INDEX BINs.fasta
 
 #then run smalt
 for R1 in *_1.fastq.gz; do
