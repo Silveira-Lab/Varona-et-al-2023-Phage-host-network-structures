@@ -122,7 +122,7 @@ conda deactivate
 
 ```
 
-## Identification of viral contigs and bins
+## Identification of viral contigs and vMAGs
 viral contigs were identified with VIBRANT, dereplicated using cd-hit-est and then assembled to bins using vRhyme
 ```bash
 #before inputting to VIBRANT, catenate all contigs from different samples into one file
@@ -164,7 +164,7 @@ python3 /nethome/nsv19/anaconda3/envs/virathon/share/virathon/Virathon.py --geno
 
 ```
 
-## MAG and viral abundances
+## bMAG and vMAG abundances
 Fraction of reads mapped to viral and bacterial bin were caluclated by mapping qc'd reads to bins with smalt
 ```bash
 
