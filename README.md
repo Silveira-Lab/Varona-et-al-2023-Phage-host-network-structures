@@ -39,8 +39,8 @@ done
 ```
 
 ## Contig assembly with SPAdes
-assembling qc'd reads to contigs occured with SPAdes using --meta flag
-assembler was run as a loop for each sample to assemble by sample
+Assembling qc'd reads to contigs occured with SPAdes using --meta flag.
+The Assembler was run as a loop for each sample to assemble by sample.
 ```bash
 for f in *_1_outfinal.fastq; do 
         name=$(echo ${f} | sed 's/_1_outfinal.fastq//g') 
@@ -109,14 +109,12 @@ megahit --presets meta-large -1 List,of,R1,qc-d,fatqs \
   metawrap bin_refinement -o ${sample}_refined-bins -c 10 -x 70 -t $threads -A ${sample}_concoct-bins/ -B {sample}_maxbin2-bins/ -C ${sample}_metabat2-bins/
 
 # CheckM
-#!/bin/bash
-eval "$(conda shell.bash hook)"
-conda activate metawrap-env
 checkm lineage_wf -x fa --pplacer_threads 64 -t 64 bins/ checkm-out --tab_table --file concoct_checkM.csv
 conda deactivate
 
 ```
 ## Dereplicating and generating bacterial clusters
+Dereplicate bMAGs at 95%
 ```bash
 # performed using anvio dereplicate genomes feature
 anvi-dereplicate-genomes --ani-dir /PATH/TO/bacterial_bins/ \ 
@@ -126,7 +124,7 @@ anvi-dereplicate-genomes --ani-dir /PATH/TO/bacterial_bins/ \
 ```
 
 ## Identification of viral contigs and vMAGs
-viral contigs were identified with VIBRANT, dereplicated using cd-hit-est and then assembled to bins using vRhyme
+Viral contigs were identified with VIBRANT, dereplicated using cd-hit-est and then assembled to bins using vRhyme
 ```bash
 #before inputting to VIBRANT, catenate all contigs from different samples into one file
 #run vibrant
