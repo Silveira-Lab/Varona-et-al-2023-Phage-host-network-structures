@@ -118,7 +118,10 @@ conda deactivate
 ```
 ## Dereplicating and generating bacterial clusters
 ```bash
-
+# performs using anvio dereplicate genomes
+anvi-dereplicate-genomes --ani-dir /PATH/TO/bacterial_bins/ \ 
+                         -o /PATH/TO/95_perc_bacterial_bins \
+                         --program fastani --similiarity-threshold 0.95
 
 ```
 
