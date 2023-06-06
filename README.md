@@ -1,4 +1,4 @@
-# Varona-et-al-2023-Phage-host-network-structures
+# Varona-et-al-2023-Phage-host-bioinformatic-preprocessing
 Supplementary materials and code utilised in the the publication by Varona et al 2023
 
 
