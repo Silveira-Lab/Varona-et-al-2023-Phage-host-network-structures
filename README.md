@@ -161,7 +161,7 @@ checkv end_to_end all_linked_vRhyme_vMAGs.fasta checkv/ -t 16 -d /PATH/TO/CHECKV
 #note: to handle N-linkages programs using prodigal were modified to use -m flag 
 
 #dereplicate using virathon
-python3 /nethome/nsv19/anaconda3/envs/virathon/share/virathon/Virathon.py --genome_files all_linked_vRhyme_vMAGs.fasta --make_pops True --threads 24
+python3 Virathon.py --genome_files all_linked_vRhyme_vMAGs.fasta --make_pops True --threads 24
 
 ```
 
